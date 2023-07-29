@@ -1,5 +1,5 @@
 # Portfolio
-# A portfolio website is a digital platform created by individuals, artists, designers, photographers, developers, and other professionals to showcase their work, skills, achievements, and projects. The primary purpose of a portfolio website is to provide a visually appealing and organized display of the creator's best works, allowing potential clients, employers, or collaborators to explore their capabilities and style.
+A portfolio website is a digital platform created by individuals, artists, designers, photographers, developers, and other professionals to showcase their work, skills, achievements, and projects. The primary purpose of a portfolio website is to provide a visually appealing and organized display of the creator's best works, allowing potential clients, employers, or collaborators to explore their capabilities and style.
 
 Key features of a portfolio website typically include:
 
