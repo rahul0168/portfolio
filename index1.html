@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Glow Effect and Card Hover */
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+        }
+        .gradient-border {
+            border-image: linear-gradient(45deg, #42e695, #3bb2b8) 1;
+        }
+        
+        /* Transparent Card */
+        .transparent-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid white;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+            z-index: 9999;
+        }
+
+        /* Cursor Hover Effects */
+        .hover-target:hover ~ .custom-cursor {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+        /* Tab Navigation */
+        .tab-navigation {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .tab-navigation button {
+            background: transparent;
+            border: none;
+            padding: 1rem;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+            color: #ffffff;
+            cursor: pointer;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+        .tab-navigation button.active {
+            border-bottom: 2px solid #42e695;
+            color: #42e695;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Image Scroll On Hover */
+        .image-scroll-container {
+            position: relative;
+        }
+
+        .image-scroll-container {
+            display: block;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 1px;
+            margin: 0 auto;
+        }
+        .image-scroll-container img {
+            bottom: -1210px;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            z-index: 0;
+            margin: 0;
+            padding: 0;
+            transition: bottom 5s;
+        }
+        .image-scroll-container:hover img {
+            bottom: 0;
+            transition: all 5s;
+        }
+        .image-wrap {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: all 1s ease-in-out;
+        }
+        .image-wrap:hover img {
+            object-position: bottom center;
+        }
+        /* View More Button */
+/* Transparent View More Button */
+.transparent-view-more-button {
+    background-color: transparent;
+    color: #e0f6eb; /* Green color for text */
+    border: 2px solid #e0f6eb; /* Green border */
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.transparent-view-more-button:hover {
+    color: #ffffff; /* Text color on hover */
+    background-color: #472770; /* Green background on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-view-more-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #42e695; /* Focus ring */
+}
+
+
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 text-white font-sans leading-normal tracking-normal overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header class="container mx-auto px-6 py-16 relative">
+        <div class="text-center relative z-10">
+            <img src="assets/images/main.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto border-4 border-white mb-4 glow-effect">
+            <h1 class="text-4xl font-extrabold bg-clip-text text-transparent text-white ">Rahul Naik Mule</h1>
+            <p class="text-gray-300 mb-6 text-lg">Web Developer & Software Engineer</p>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="transform hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-linkedin w-10 h-10 text-3xl"></i>
+                </a>
+                <a href="#" class="transform hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-twitter w-10 h-10 text-3xl"></i>
+                </a>
+                <a href="#" class="transform hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-github w-10 h-10 text-3xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="tab-navigation">
+            <button class="active" onclick="showTab('all')">All</button>
+            <button onclick="showTab('experience')">Experience</button>
+            <button onclick="showTab('projects')">Projects</button>
+            <button onclick="showTab('languages')">Languages</button>
+        </div>
+
+        <!-- All Section -->
+        <div id="all" class="tab-content active">
+            <h2 class="text-3xl font-bold text-center mb-12">All</h2>
+            <!-- Combine content from all tabs here -->
+            <div class="flex flex-wrap justify-center space-x-6">
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/4 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">Web Developer</h3>
+                    <p class="text-gray-200">Codrix Solutions LLP</p>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/4 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">Software Engineer</h3>
+                    <p class="text-gray-200">Infipre IT Services (OPC) Pvt. Ltd.</p>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/4 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">Full Stack Developer </h3>
+                    <p class="text-gray-200">Deployh.ai</p>
+                </div>
+                <!-- More items can be added here -->
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    <div class="image-wrap">
+                        <img src="assets/images/projects/alhajirygroup.png" />
+                    </div>
+                    <h3 class="text-xl font-bold">Station UI - Component Library</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>HTML/CSS/JS</span>
+                    </div>
+                </div>
+                 <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/xtatic-oman.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/nwwlogistics.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <!-- View More Button -->
+<!-- Transparent View More Button -->
+<button class="transparent-view-more-button text-center" onclick="showTab('projects')">View More</button>
+
+                <!-- More project items can be added here -->
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div id="experience" class="tab-content">
+            <h2 class="text-3xl font-bold text-center mb-12">Experience</h2>
+            <div class="flex flex-wrap justify-center space-x-6">
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/3 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">Web Developer</h3>
+                    <p class="text-gray-200">Transform Labs</p>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/3 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">Software Engineer</h3>
+                    <p class="text-gray-200">Vuria Inc.</p>
+                </div>
+                <!-- Add more job items as needed -->
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+         <div id="projects" class="tab-content">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                   
+                    <div class="image-wrap">
+                            <img src="assets/images/projects/alhajirygroup.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Station UI - Component Library</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>HTML/CSS/JS</span>
+                    </div>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/xtatic-oman.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/nwwlogistics.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                 <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/zulu.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/shamalplastics.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/jsg.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/shamalplastics1.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative">
+                    
+                      <div class="image-wrap">
+                            <img src="assets/images/projects/shamalplastics2.png" />
+                      
+                    </div>
+                    <h3 class="text-xl font-bold">Alliance DAO NFT Site</h3>
+                    <div class="absolute top-0 right-0 mt-4 mr-4 text-gray-400 text-xs">
+                        <span>React/Next.js</span>
+                    </div>
+                </div>
+                <!-- Add more project items as needed -->
+            </div>
+        </div>
+
+        <!-- Languages Section -->
+        <div id="languages" class="tab-content">
+            <h2 class="text-3xl font-bold text-center mb-12">Languages</h2>
+            <div class="flex flex-wrap justify-center space-x-6">
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/3 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">HTML</h3>
+                    <p class="text-gray-200">Expert Level</p>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/3 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">CSS</h3>
+                    <p class="text-gray-200">Expert Level</p>
+                </div>
+                <div class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 w-full md:w-1/3 gradient-border">
+                    <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+                    <p class="text-gray-200">Advanced Level</p>
+                </div>
+                <!-- Add more languages as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="container mx-auto px-6 py-12 text-center">
+        <p class="text-gray-400">© 2024 Rahul Naik Mule. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <script>
+        // Tab Functionality
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            const tabs = document.querySelectorAll('.tab-navigation button');
+            contents.forEach(content => content.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+
+        // Custom Cursor Functionality
+        const customCursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.pageX + 'px';
+            customCursor.style.top = e.pageY + 'px';
+        });
+
+        // Custom Cursor Hover Effect
+        const hoverTargets = document.querySelectorAll('.hover-target');
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                customCursor.classList.add('hovered');
+            });
+            target.addEventListener('mouseleave', () => {
+                customCursor.classList.remove('hovered');
+            });
+        });
+    </script>
+</body>
+</html>
