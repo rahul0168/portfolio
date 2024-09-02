@@ -25,7 +25,23 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  </head>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+  // Hide loader after content is loaded
+      const projects = document.getElementById("Homeprojects");
+      const viewMore = document.getElementById("viewMore");
+        // projects.style.display = "none";
+
+      const loader = document.getElementById('loader');
+      setTimeout(function() {
+        projects.style.display = "grid";
+        viewMore.style.display = "flex";
+        loader.style.display = "none";
+      }, 1500); // Adjust timing as necessary
+    });
+
+    </script>
+    </head>
   <body
     class="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 text-white font-sans leading-normal tracking-normal overflow-x-hidden"
   >
@@ -182,11 +198,10 @@
           </div>
         </div>
 
-        <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10"
-        >
+        <h2 class="text-3xl font-bold text-center mb-12 pt-10" style="">Projects</h2>
+        <div id="loader"></div>
+        <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10" id="Homeprojects" style="display: none;">
+        
         <div
             class="transparent-card p-8 rounded-2xl shadow-2xl card-hover transition duration-500 transform hover:scale-105 relative"
           >
@@ -259,7 +274,7 @@
 
           <!-- More project items can be added here -->
         </div>
-        <div class="center-container">
+        <div class="center-container" id="viewMore" style="display:none;">
           <button
             class="transparent-view-more-button text-center"
             onclick="showTab('projects')"
