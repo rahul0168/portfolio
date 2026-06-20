@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul Naik Mule - Full Stack Developer</title>
+
+    <!-- Google Fonts: Poppins for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!-- Your Stylesheet -->
+    <link rel="stylesheet" href="assets/css/design.css" />
+  </head>
+  <body>
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+      <div class="loader-content">
+        <div class="loader-text">Rahul Naik Mule.</div>
+        <div class="loader-line"></div>
+      </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- ======== NAVBAR ======== -->
+    <header class="navbar">
+      <div class="container navbar-container">
+        <a href="#" class="nav-logo">Rahul Naik Mule.</a>
+
+        <div class="nav-menu" id="nav-menu">
+          <nav class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+          </nav>
+          <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <!-- Sun Icon -->
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <!-- Moon Icon -->
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+          </div>
+          
+          <!-- Mobile Menu Close Button -->
+          <button class="nav-close" id="nav-close" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ======== HERO SECTION ======== -->
+      <section id="hero" class="container hero-section">
+        <div class="hero-text">
+          <h1 class="fade-in-element">
+            Full Stack Developer & <span class="gradient-text">Creative Problem Solver</span>
+          </h1>
+          <p class="fade-in-element">
+            I build scalable, high-performance web applications that solve real-world problems and provide outstanding user experiences.
+          </p>
+          <div class="hero-buttons fade-in-element">
+            <a href="#projects" class="btn btn-primary">
+              View My Projects
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+          </div>
+        </div>
+        <div class="hero-image fade-in-element">
+          <img
+            src="assets/images/main2.jpg"
+            alt="A professional photo of Rahul Naik Mule"
+          />
+        </div>
+      </section>
+
+      <!-- ======== ABOUT ME SECTION ======== -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="section-heading-wrapper">
+            <h2 class="section-heading fade-in-element">About Me</h2>
+          </div>
+          <div class="about-content fade-in-element">
+            <p>
+              Experienced Software Developer with 5+ years of expertise in developing high-performance applications. Proficient in PHP, React, Laravel, CodeIgniter, and JavaScript, with a strong focus on full-stack development and software architecture. Adept at creating scalable, maintainable, and user-friendly systems. Demonstrated success in collaborating with cross-functional teams to deliver projects on time and within scope. Committed to continuous learning and staying updated with the latest industry standards and tech stacks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== WORK EXPERIENCE SECTION ======== -->
+      <section id="experience" class="container experience-section">
+        <div class="section-heading-wrapper">
+          <h2 class="section-heading fade-in-element">Work Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item fade-in-element">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>Full Stack Developer</h3>
+                <span class="timeline-date">16-08-2024 – Present</span>
+              </div>
+              <h4 style="color: var(--text-muted); font-size: 1rem; font-weight: 500; margin-bottom: 15px;">Deployh.ai</h4>
+              <ul>
+                <li>Designed and implemented full-stack solutions using PHP, Laravel, and React.</li>
+                <li>Integrated external APIs, designed secure databases, and deployed scalable applications.</li>
+                <li>Collaborated across engineering teams to optimize development pipelines and workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in-element">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>Software Engineer</h3>
+                <span class="timeline-date">03-08-2023 – 30-07-2024</span>
+              </div>
+              <h4 style="color: var(--text-muted); font-size: 1rem; font-weight: 500; margin-bottom: 15px;">Infipre IT Services (OPC) Pvt. Ltd.</h4>
+              <ul>
+                <li>Engineered robust backend systems using Node.js, Laravel, and Core PHP.</li>
+                <li>Built, secured, and maintained RESTful APIs ensuring efficient and optimized data flows.</li>
+                <li>Partnered closely with frontend developers and QA teams to deploy responsive, bug-free web products.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in-element">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>Web Developer</h3>
+                <span class="timeline-date">24-11-2019 – 30-07-2022</span>
+              </div>
+              <h4 style="color: var(--text-muted); font-size: 1rem; font-weight: 500; margin-bottom: 15px;">Codrix Solutions LLP</h4>
+              <ul>
+                <li>Developed complex client sites with HTML5, CSS3, JavaScript, and custom PHP platforms.</li>
+                <li>Implemented fluid responsive design architectures and optimized loading performance across screens.</li>
+                <li>Maintained codebases, implemented software enhancements, and resolved critical bugs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== PROJECTS SECTION ======== -->
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <div class="section-heading-wrapper">
+            <h2 class="section-heading fade-in-element">Selected Projects</h2>
+          </div>
+          <div class="projects-container fade-in-element">
+            <div id="projects-carousel" class="owl-carousel projects-list">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== SKILLS SECTION ======== -->
+      <section id="skills" class="container skills-section">
+        <div class="section-heading-wrapper">
+          <h2 class="section-heading fade-in-element">My Tech Stack</h2>
+        </div>
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category fade-in-element">
+            <div class="skill-category-header">
+              <div class="skill-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h4>Frontend</h4>
+            </div>
+            <ul>
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React & React Native</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category fade-in-element">
+            <div class="skill-category-header">
+              <div class="skill-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h4>Backend</h4>
+            </div>
+            <ul>
+              <li>PHP</li>
+              <li>Laravel 10</li>
+              <li>CodeIgniter 3/4</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-category fade-in-element">
+            <div class="skill-category-header">
+              <div class="skill-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                  <path d="M3 12A9 3 0 0 0 21 12"></path>
+                </svg>
+              </div>
+              <h4>Databases</h4>
+            </div>
+            <ul>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+
+          <!-- CMS -->
+          <div class="skill-category fade-in-element">
+            <div class="skill-category-header">
+              <div class="skill-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h4>CMS & E-commerce</h4>
+            </div>
+            <ul>
+              <li>WordPress</li>
+              <li>WooCommerce</li>
+            </ul>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category fade-in-element">
+            <div class="skill-category-header">
+              <div class="skill-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <h4>Tools & Deployment</h4>
+            </div>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Vercel</li>
+              <li>cPanel / WHM</li>
+              <li>XAMPP / MAMP</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== CONTACT SECTION ======== -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-card fade-in-element">
+            <h2 class="gradient-text">Let's Build Something Together</h2>
+            <p>
+              Have a project in mind, need a developer, or just want to discuss technical ideas? I'm always open to new opportunities.
+            </p>
+            <a href="mailto:rahulnaikmule@gmail.com" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              rahulnaikmule@gmail.com
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p>© 2026 Rahul Naik Mule. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/rahul0168" target="_blank" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/rahul-naik-mule-b26335aa/" target="_blank" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // ======== SCROLL PROGRESS BAR ========
+        const scrollBar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+          const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+          scrollBar.style.width = scrolled + '%';
+        });
+
+        // ======== RESPONSIVE NAVBAR LOGIC ========
+        const navMenu = document.getElementById('nav-menu');
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose = document.getElementById('nav-close');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const openMenu = () => {
+          navMenu.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        };
+
+        const closeMenu = () => {
+          navMenu.classList.remove('is-open');
+          document.body.style.overflow = 'auto';
+        };
+
+        if (navToggle) navToggle.addEventListener('click', openMenu);
+        if (navClose) navClose.addEventListener('click', closeMenu);
+        navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // ======== THEME TOGGLE LOGIC ========
+        const themeToggle = document.getElementById("theme-toggle");
+        const docEl = document.documentElement;
+
+        const currentTheme = localStorage.getItem("theme") || "dark";
+        docEl.setAttribute("data-theme", currentTheme);
+
+        themeToggle.addEventListener("click", () => {
+          let newTheme = docEl.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          docEl.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+        });
+
+        // ======== NAVBAR SCROLL EFFECT ========
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 40) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+
+        // ======== SCROLL REVEAL ANIMATION ========
+        const animatedElements = document.querySelectorAll(".fade-in-element");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        animatedElements.forEach((element) => observer.observe(element));
+
+        // ======== SMOOTH INTERACTIVE CURSOR ========
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorOutline = document.querySelector(".cursor-outline");
+
+        let mouseX = -100, mouseY = -100;
+        let cursorX = -100, cursorY = -100;
+        let cursorVisible = false;
+
+        window.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          
+          if (!cursorVisible) {
+            cursorDot.style.opacity = 1;
+            cursorOutline.style.opacity = 1;
+            cursorVisible = true;
+          }
+        });
+
+        const animateCursor = () => {
+          const deltaX = mouseX - cursorX;
+          const deltaY = mouseY - cursorY;
+
+          cursorX += deltaX * 0.15;
+          cursorY += deltaY * 0.15;
+
+          cursorDot.style.left = `${mouseX}px`;
+          cursorDot.style.top = `${mouseY}px`;
+
+          cursorOutline.style.left = `${cursorX}px`;
+          cursorOutline.style.top = `${cursorY}px`;
+
+          requestAnimationFrame(animateCursor);
+        };
+        animateCursor();
+
+        // Enlarge cursor on links/buttons
+        const interactiveElements = document.querySelectorAll("a, button, .owl-prev, .owl-next");
+        interactiveElements.forEach((el) => {
+          el.addEventListener("mouseenter", () => cursorOutline.classList.add("enlarged"));
+          el.addEventListener("mouseleave", () => cursorOutline.classList.remove("enlarged"));
+        });
+
+        document.addEventListener("mouseleave", () => {
+          cursorDot.style.opacity = 0;
+          cursorOutline.style.opacity = 0;
+          cursorVisible = false;
+        });
+
+        // ======== PRELOADER ANIMATION CLEANUP ========
+        const preloader = document.querySelector('.preloader');
+        const triggerPreloaderExit = () => {
+          preloader.classList.add('loaded');
+          preloader.addEventListener('transitionend', () => {
+            document.body.classList.remove('loading');
+            preloader.style.display = 'none';
+          });
+        };
+
+        // Fallback preloader timeout in case window load event doesn't fire immediately
+        const preloaderTimeout = setTimeout(triggerPreloaderExit, 1500);
+
+        window.addEventListener('load', () => {
+          clearTimeout(preloaderTimeout);
+          triggerPreloaderExit();
+        });
+
+        // ======== DYNAMIC PROJECTS LOADER ========
+        const container = document.getElementById('projects-carousel');
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+        fetch('https://tkeworld.com/demo/json/projects.php', { signal: controller.signal })
+          .then(response => {
+            clearTimeout(timeoutId);
+            return response.json();
+          })
+          .catch(error => {
+            clearTimeout(timeoutId);
+            console.warn('External projects endpoint failed or timed out. Using local projects.json fallback.', error);
+            return fetch('projects.json').then(res => res.json());
+          })
+          .then(data => {
+            if (!data || !data.projects) return;
+
+            data.projects.forEach(project => {
+              const techStackHTML = project.techStack.map(tech => `<span>${tech}</span>`).join('');
+              const cardHTML = `
+                <div class="project-card">
+                  <div class="image-wrap">
+                    <img src="${project.imgLink}" alt="${project.name} Screenshot" loading="lazy" />
+                  </div>
+                  <div class="project-info">
+                    <h3>${project.name}</h3>
+                    <div class="tech-stack">${techStackHTML}</div>
+                    <p>${project.description}</p>
+                    <div class="project-links">
+                      <a href="${project.viewLink}" target="_blank" class="btn btn-secondary">Live Demo</a>
+                    </div>
+                  </div>
+                </div>
+              `;
+              container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+
+            // Initialize Owl Carousel
+            $(container).owlCarousel({
+              loop: true,
+              margin: 30,
+              nav: true,
+              dots: true,
+              responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1200: { items: 2 }
+              },
+              navText: [
+                '<span class="custom-prev">‹</span>',
+                '<span class="custom-next">›</span>'
+              ]
+            });
+
+            // Re-bind cursor listener to dynamic elements
+            const newInteractive = container.querySelectorAll("a, button");
+            newInteractive.forEach((el) => {
+              el.addEventListener("mouseenter", () => cursorOutline.classList.add("enlarged"));
+              el.addEventListener("mouseleave", () => cursorOutline.classList.remove("enlarged"));
+            });
+          })
+          .catch(err => console.error('Error rendering projects:', err));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+{
+  "projects": [
+    {
+      "id": "sfcoman_web",
+      "name": "SFC Oman",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A CMS-based company website for SFC Oman, built with Laravel and modern front‑end tech.",
+      "viewLink": "https://your-site.com/projects/sfcoman_web",
+      "imgLink": "assets/images/projects/sfcoman_web.png"
+    },
+    {
+      "id": "dgcon",
+      "name": "DGCON",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A dynamic CMS website for DGCON, created with Laravel and custom admin controls.",
+      "viewLink": "https://your-site.com/projects/dgcon",
+      "imgLink": "assets/images/projects/dgcon.png"
+    },
+    {
+      "id": "rawdh_residences",
+      "name": "Rawdh Residences",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A real estate showcase site for Rawdh Residences, featuring a CMS backend powered by Laravel.",
+      "viewLink": "https://your-site.com/projects/rawdh_residences",
+      "imgLink": "assets/images/projects/alirfan.png"
+    },
+    {
+      "id": "sunrise_fisheries",
+      "name": "Sunrise Fisheries Company",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A corporate site for Sunrise Fisheries Company, built with a Laravel CMS and responsive front‑end.",
+      "viewLink": "https://your-site.com/projects/sunrise_fisheries",
+      "imgLink": "assets/images/projects/sfcoman.png"
+    },
+    {
+      "id": "alhajiry",
+      "name": "Alhajiry",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A CMS website for Alhajiry Group, with an admin panel powered by Laravel.",
+      "viewLink": "https://your-site.com/projects/alhajiry",
+      "imgLink": "assets/images/projects/alhajirygroup.png"
+    },
+    {
+      "id": "xtatic_adventure_oman",
+      "name": "Xtatic Adventure Oman",
+      "techStack": ["PHP", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "An adventure travel site built in PHP with custom CMS functionality for Xtatic Oman.",
+      "viewLink": "https://your-site.com/projects/xtatic_adventure_oman",
+      "imgLink": "assets/images/projects/xtatic-oman.png"
+    },
+    {
+      "id": "nww_logistics",
+      "name": "National World Wide Logistics",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A logistics service website featuring a Laravel‑based CMS and interactive UI components.",
+      "viewLink": "https://your-site.com/projects/nwwlogistics",
+      "imgLink": "assets/images/projects/nwwlogistics.png"
+    },
+    {
+      "id": "zulu_store",
+      "name": "Zulu Store",
+      "techStack": ["HTML", "CSS", "JavaScript"],
+      "description": "A storefront site for Zulu Store, built with pure HTML, CSS, and vanilla JavaScript.",
+      "viewLink": "https://your-site.com/projects/zulu_store",
+      "imgLink": "assets/images/projects/zulu.png"
+    },
+    {
+      "id": "buraimi_car_repair",
+      "name": "Buraimi Car Repair",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A service-oriented site for a car repair business, powered by Laravel CMS.",
+      "viewLink": "https://your-site.com/projects/buraimi_car_repair",
+      "imgLink": "assets/images/projects/buraimi.png"
+    },
+    {
+      "id": "star_modren_industries",
+      "name": "Star Modren Industries",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A company website with admin CMS for Star Modren Industries, built in Laravel.",
+      "viewLink": "https://your-site.com/projects/star_modren_industries",
+      "imgLink": "assets/images/projects/starmodren.png"
+    },
+    {
+      "id": "shamal_plastics_3",
+      "name": "Shamal Plastics 3",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "Third iteration of the Shamal Plastics site, with updated Laravel‑CMS features.",
+      "viewLink": "https://your-site.com/projects/shamal_plastics_3",
+      "imgLink": "assets/images/projects/shamalplastics3.png"
+    },
+    {
+      "id": "shamal_plastics_home_1",
+      "name": "Shamal Plastics Home 1",
+      "techStack": ["Laravel", "CMS"],
+      "description": "First home version of Shamal Plastics built on Laravel CMS.",
+      "viewLink": "https://your-site.com/projects/shamal_plastics_home_1",
+      "imgLink": "assets/images/projects/shamalplastics.png"
+    },
+    {
+      "id": "jsg",
+      "name": "JSG",
+      "techStack": ["PHP"],
+      "description": "A bespoke PHP‑based project for JSG, focused on server‑side functionality.",
+      "viewLink": "https://your-site.com/projects/jsg",
+      "imgLink": "assets/images/projects/jsg.png"
+    },
+    {
+      "id": "shamal_plastics_home_2",
+      "name": "Shamal Plastics Home 2",
+      "techStack": ["Laravel", "CMS"],
+      "description": "Second home version of Shamal Plastics with Laravel CMS enhancements.",
+      "viewLink": "https://your-site.com/projects/shamal_plastics_home_2",
+      "imgLink": "assets/images/projects/shamalplastics1.png"
+    },
+    {
+      "id": "avicen_pharmacy",
+      "name": "Avicen Pharmacy",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "A pharmacy website built with Laravel CMS and responsive front‑end features.",
+      "viewLink": "https://your-site.com/projects/avicen_pharmacy",
+      "imgLink": "assets/images/projects/avicen.png"
+    },
+    {
+      "id": "jkrm",
+      "name": "JKRM",
+      "techStack": ["HTML", "CSS", "JavaScript"],
+      "description": "A markup‑driven project for JKRM using HTML, CSS, and JavaScript.",
+      "viewLink": "https://your-site.com/projects/jkrm",
+      "imgLink": "assets/images/projects/jkrm.png"
+    },
+    {
+      "id": "al_hosni",
+      "name": "Al Hosni",
+      "techStack": ["Laravel", "CMS", "HTML", "CSS", "JavaScript"],
+      "description": "Corporate site for Al Hosni, powered by Laravel CMS and modern UI.",
+      "viewLink": "https://your-site.com/projects/al_hosni",
+      "imgLink": "assets/images/projects/AL.png"
+    },
+    {
+      "id": "shamal_plastics_home_3",
+      "name": "Shamal Plastics Home 3",
+      "techStack": ["Laravel", "CMS"],
+      "description": "Third home version of Shamal Plastics, using updated Laravel CMS features.",
+      "viewLink": "https://your-site.com/projects/shamal_plastics_home_3",
+      "imgLink": "assets/images/projects/shamalplastics2.png"
+    }
+  ]
+}
